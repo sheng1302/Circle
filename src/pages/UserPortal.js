@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/UserPortal.css';
 import Footer from '../components/Footer';
 import SideBar from '../components/SideBar';
 import Header from '../components/Header';

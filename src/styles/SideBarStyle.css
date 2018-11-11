@@ -1,6 +1,7 @@
 .sidenav{
     padding: 5%;
     height: 100%;
+    left: 0px;
     position: fixed;
     background-color: #9ae17b;
     display: inline-block;
