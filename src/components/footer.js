@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import logo from '../sources/circle_logo.png';
-import '../styles/footer.css'; // using footer style
+import '../styles/Footer.css'; // using footer style
 
 class Footer extends Component{
 
