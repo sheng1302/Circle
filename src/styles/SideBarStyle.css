@@ -1,13 +1,12 @@
 .sidenav{
-    width: 20%;
+    padding: 5%;
     height: 100%;
     position: fixed;
-    background-color: #182628;
-
+    background-color: #9ae17b;
+    display: inline-block;
 }
 
 .sidenav a {
-    padding: 5%;
     text-decoration: none;
     font-size: 25px;
     color: #f2f2f2;
@@ -17,11 +16,10 @@
 .dropbtn {
     background-color: #2f7470;
     color: #f2f2f2;
-    padding: 10%;
+    padding: 1% 1%;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    margin: 20% 20% 2% 20%;
 }
 
 .dropdown {
@@ -55,8 +53,7 @@
 }
 
 .container {
-    padding: 2%;
     color: #f2f2f2;
     display: block;
-    margin: 0% 20% 0% 20%;
+    padding: 0px;
 }

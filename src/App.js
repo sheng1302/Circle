@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import UserPortal from './pages/UserPortal';
+import ItemBox from './components/ItemBox.js';
+
 
 class App extends Component {
   render() {
@@ -7,6 +9,7 @@ class App extends Component {
       <div className="App">
 
         <UserPortal/>
+
 
       </div>
     );

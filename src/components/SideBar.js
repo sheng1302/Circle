@@ -17,9 +17,10 @@ class SideBar extends React.Component {
                 <label className="container">One
                     <input type="checkbox" checked/>
                 </label>
+
                 <label className="container">two
                     <input type="checkbox" checked/>
-                </label>                 
+                </label>
             </div>
         );
     }
