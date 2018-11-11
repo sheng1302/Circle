@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Footer from '../components/Footer';
 import SideBar from '../components/SideBar'
-import Header from '../components/header';
+import Header from '../components/Header';
 
 class UserPortal extends Component{
 

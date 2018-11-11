@@ -4,10 +4,7 @@
   "private": true,
   "dependencies": {
     "express": "^4.16.4",
-<<<<<<< Updated upstream
     "mdbreact": "^4.8.2",
-=======
->>>>>>> Stashed changes
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.5"
