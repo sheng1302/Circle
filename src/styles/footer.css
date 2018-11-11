@@ -1,0 +1,12 @@
+.company-background-container{
+    background-color: #182628;
+    color: #f2f2f2;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    text-align: center;
+}
+
+.circle-logo{
+    width: 10%;
+    height: auto;
+}
