@@ -1,7 +1,7 @@
 import React from 'react';
-import '../style.css'
+import '../styles/SideBarStyle.css'
 
-class ItemsList extends React.Component {
+class SideBar extends React.Component {
     render(){
         return(
             <div class="sidenav">
@@ -25,4 +25,4 @@ class ItemsList extends React.Component {
     }
 }
 
-export default ItemsList;
+export default SideBar;

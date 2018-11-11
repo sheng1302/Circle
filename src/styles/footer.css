@@ -4,9 +4,14 @@
     padding-top: 3em;
     padding-bottom: 3em;
     text-align: center;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
 }
 
 .circle-logo{
     width: 10em;
     height: auto;
 }
+
