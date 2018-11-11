@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UserPortal from './pages/userPortal';
+import UserPortal from './pages/UserPortal';
 
 class App extends Component {
   render() {
