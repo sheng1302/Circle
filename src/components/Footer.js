@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import logo from '../sources/circle_logo.png';
 import '../styles/Footer.css'; // using footer style
+import LoginBox from './loginBox';
 
 class Footer extends Component{
 
@@ -19,6 +20,8 @@ class Footer extends Component{
                     </p>
 
                 </div>
+
+                <LoginBox/>
 
             </div>
         )
