@@ -4,7 +4,7 @@ import '../styles/SideBarStyle.css'
 class SideBar extends React.Component {
     render(){
         return(
-            <div class="sidenav">
+            <div className="sidenav">
                 <div className="dropdown">
                     <button className="dropbtn">Categories</button>
                     <div className="dropdown-content">
