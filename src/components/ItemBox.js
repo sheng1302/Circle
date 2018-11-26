@@ -4,11 +4,11 @@ class ItemBox extends Component {
   render() {
     return (
       <div className="box-item">
-        <ItemTitle title="Placeholder Title" />
+        <ItemTitle title={this.props.title} />
         <ItemImage image-source="#" />
-        <Category category="placeholder category" />
-        <DateModified date="placeholder date" />
-        <ItemDescription description="description"/>
+        <Category category={this.props.category} />
+        <DateModified date={this.props.date} />
+        <ItemDescription description={this.props.description}/>
       </div>
     );
   }
