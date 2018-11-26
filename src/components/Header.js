@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import logo from '../sources/circle_logo.png';
-import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink} from 'mdbreact';
 
-class Header extends React.Component {
+class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,32 +19,26 @@ class Header extends React.Component {
     }
     render() {
         return (
-            <Router>
                 <Navbar color='green' dark expand="md" scrolling>
                     <NavbarBrand href="/">
-                        <img src={logo} height="50"/>
+                        <img src={logo} height="50" alt="logo"/>
                     </NavbarBrand>
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav left>
                           <NavItem>
-                              <NavLink to="#">Home</NavLink>
+                              <NavLink to="/">Mission</NavLink>
                           </NavItem>
                           <NavItem>
-                              <NavLink to="#">About</NavLink>
+                              <NavLink to="/about">About Circle</NavLink>
                           </NavItem>
-                          <NavItem>
-                              <NavLink to="#">Support Us</NavLink>
-                          </NavItem>
-                          <NavItem>
-                              <NavLink to="#">News</NavLink>
-                          </NavItem>
-                          <NavItem>
-                              <NavLink to="#">Event</NavLink>
-                          </NavItem>
-                          <NavItem>
-                              <NavLink to="#">Contact</NavLink>
-                          </NavItem>
+                            <NavItem>
+                                <NavLink to="/donate">Donate</NavLink> {/*for user to donate only*/}
+                            </NavItem>
+                            <NavItem>
+                                <NavLink to="/non-profit">Non-Profit Portal</NavLink>
+                            </NavItem>
+
                         </NavbarNav>
                         <NavbarNav right>
                           <NavItem>
@@ -56,7 +49,6 @@ class Header extends React.Component {
                         </NavbarNav>
                     </Collapse>
                 </Navbar>
-            </Router>
         );
     }
 }

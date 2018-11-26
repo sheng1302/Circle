@@ -8,6 +8,7 @@ class ItemBox extends Component {
         <ItemImage image-source="#" />
         <Category category="placeholder category" />
         <DateModified date="placeholder date" />
+        <ItemDescription description="description"/>
       </div>
     );
   }
