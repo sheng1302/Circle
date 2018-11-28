@@ -8,7 +8,7 @@ class HomePage extends Component{
             <div className="Home-Portal">
 
                 <div className="first-section">
-                    <div className="container-fluid-self background-container parallax-visual" >
+                    <div className="container-fluid-self background-container1 parallax-visual" >
                         <br/>
 
                         <div className="display">

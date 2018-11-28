@@ -27,9 +27,6 @@ class Header extends Component {
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav left>
                           <NavItem>
-                              <NavLink to="/">Mission</NavLink>
-                          </NavItem>
-                          <NavItem>
                               <NavLink to="/about">About Circle</NavLink>
                           </NavItem>
                             <NavItem>

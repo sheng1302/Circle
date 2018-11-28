@@ -5,8 +5,11 @@
   "dependencies": {
     "express": "^4.16.4",
     "mdbreact": "^4.8.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.6.3",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.6.3",
+    "react-grid-system": "^4.3.1",
+    "react-resize-image": "^1.0.4",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.5"
   },

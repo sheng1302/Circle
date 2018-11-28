@@ -15,7 +15,7 @@ class Footer extends Component{
 
                 <div className="container-section-two">
                     <p className="section-two-copyright">
-                        Copyright © 2018 Circle. All Right Reserved.
+                        Copyright &copy; 2018 Circle. All Right Reserved.
                     </p>
 
                 </div>
