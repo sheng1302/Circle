@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 const authChecker = {
 
     isAuthenticated : false ,
-    authenticate(email, pass, cb){
+    authenticate(email, pass, cb, cb_failAuth){
         fetch('/auth/login',{
             method: 'POST',
             headers: {
@@ -28,8 +28,9 @@ const authChecker = {
             .then( (body) => {
                 if(this.isAuthenticated){
                     cb();
+                } else{
+                    cb_failAuth(body.message[0]);
                 }
-                console.log(body);
 
             })
             .catch((err) => {
@@ -50,6 +51,7 @@ class LoginBox extends Component{
             email : '',
             password : '',
             redirectToReferrer : false,
+            authMessage : '',
         }
     }
 
@@ -68,6 +70,9 @@ class LoginBox extends Component{
 
         authChecker.authenticate(this.state.email, this.state.password, () => {
             this.setState({ redirectToReferrer: true });
+            this.setState({ authMessage: ''});
+        }, (message) => {
+            this.setState({ authMessage: message});
         });
 
     };
@@ -81,7 +86,13 @@ class LoginBox extends Component{
                 Password: <input className="input-password" onChange={this.handlePasswordChange} type="password"/>
                 <button className="btn btn-primary" onClick={this.handleSubmit}>Login</button> </div>
             }
+
+            <div className="login-status">
+                <p className="status">{this.state.authMessage}</p>
             </div>
+            </div>
+
+
 
         )
     }

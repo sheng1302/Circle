@@ -6,6 +6,7 @@ import NonprofitPortal from "./pages/NonProfitPortal";
 import About from "./pages/About";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Login from './pages/Login';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
                     <Route exact path="/" component={HomePortal} />
                     <Route path="/donate" component={UserPortal} />
                     <Route path="/About" component={About} />
+                    <Route path="/Login" component={Login} />
                     <Route path="/non-profit" component={NonprofitPortal} />
                 <Footer/>
                 </div>
