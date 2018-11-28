@@ -24,13 +24,29 @@
 
 }
 
-.background-container1{
-    background-image: url('../sources/bg.gif');
+.title{
+    font-size: 800%;
+}
+
+.content-container{
+    background: #f2f2f2;
+    box-shadow: none;
+    box-sizing: content-box;
+}
+
+.team-Jumbotron{
+    background: white;
+    box-shadow: none;
+    box-sizing: content-box;
+}
+
+.background-container2{
+    background-image: url('../sources/about.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     padding-top: 18%;
-    padding-bottom: 18%;
+    padding-bottom: 5%;
     text-align: center;
 }
 
@@ -39,3 +55,15 @@
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+.team-container .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .team-container h2 {
+    font-weight: 400;
+  }
+  .team-container .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
