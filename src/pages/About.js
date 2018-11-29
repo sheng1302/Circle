@@ -14,18 +14,20 @@ class About extends Component{
                <div className="first-section">
                     <div className="container-fluid-self background-container2 parallax-visual" >
                         <div className="display"> 
-                        <PageHeader className="title">Who We Are</PageHeader>
+                        <PageHeader className="title">About Circle</PageHeader>
                         </div>
                     </div>
                 </div>
                 
                 <div className="second-section">
                 <Jumbotron className="content-container">
-                    <h1>About Circle</h1>
-                    <p>Circle is a web application that will encourage communities to decrease the amount ofsecondhand (but still useful!) items that get sent to landfills and recycling centers by prioritizingreusing over recycling. According to the EPA, over 13 million tons of textiles are trashed everyyear, even though nearly half of it is perfectly reusable. This is a statistic concerning onlyclothing, so it is hard to imagine just how much is being wasted overall. Circle will serve as amiddleman that will connect users who have items they no longer want to other users ornon­profit organizations that would like to make use of the secondhand items. Users will postitems that they no longer need on the web application, making it public to all users to view andrequest. Once a request is made, the user who posted the item would be notified and the twoparties would be set up to figure out a time and place to meet</p>    
-                    <br></br>
-                    <h1>Our Mission</h1>
-                    <p>An organization that encourages people to donate items is Goodwill. However, thedifference between their model and ours is that people who have items to donate will have theoption to choose where they would like to go to drop off the items and that they can meet thepeople they are donating to. This enables users to be able to donate items regardless of their busyschedule or lack of ability to transport the items to distant locations. Our web application wouldgive another option for people who would like to donate their used items if going toorganizations like Goodwill do not work for them.</p>
+                    <h2>Our Mission</h2>
+                    <p>Circle encourages communities to decrease the amount of secondhand (but still useful!) items that get sent to landfills and recycling centers by prioritizing reusing over recycling. According to the EPA, over 13 million tons of textiles are trashed every year, even though nearly half of it is perfectly reusable. This is a statistic concerning only clothing, so just imagine vast amount of items being wasted overall.</p>
+
+                    <br/>
+
+                    <h2>What We Do</h2>
+                    <p>Circle serves as a middleman that will connect users who have items they no longer want to other users and non­profit organizations that would like to make use of the secondhand items. Users will post items that they no longer need on the web application, making it public to all users to view and request. Once a request is made, the user who posted the item would be notified and the two parties would be set up to figure out a time and place to meet.</p>
                 </Jumbotron>
                 </div>
 
