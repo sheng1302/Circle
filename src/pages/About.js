@@ -4,6 +4,7 @@ import { PageHeader } from 'react-bootstrap';
 import {Jumbotron} from 'react-bootstrap';
 import { Container, Row, Col } from 'react-grid-system';
 import ShengIMG from '../sources/sheng.jpg';
+import RachelIMG from '../sources/rachel.jpg';
 
 class About extends Component{
 
@@ -39,22 +40,22 @@ class About extends Component{
                         <Col className='col-lg-6' lg={6}>
                         <img class ="rounded-circle" src={ShengIMG} alt="Generic placeholder image" width="200" height="200" />
                         <h2>Sheng Liu</h2>
-                        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                        <p></p>
                         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                         </Col>
                         <Col className='col-lg-6' lg={6}>
                         <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="200" height="200" />
                         <h2>Kevin Thaw</h2>
-                        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                        <p></p>
                         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                         </Col>
                     </Row>
 
                     <Row  className='row'>
                         <Col className='col-lg-6' lg={6}>
-                        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="200" height="200" />
+                        <img class="rounded-circle" src={RachelIMG} alt="Generic placeholder image" width="200" height="200" />
                         <h2>Rachel Chen</h2>
-                        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+                        <p>CIS Major in Baruch College</p>
                         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                         </Col>
                         <Col className='col-lg-6' lg={6}>

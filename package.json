@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "express": "^4.16.4",
-    "mdbreact": "^4.8.2",
+    "mdbreact": "^4.8.4",
     "react": "^16.6.3",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.6.3",
