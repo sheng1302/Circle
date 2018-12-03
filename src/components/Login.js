@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Redirect } from 'react-router-dom';
 import AuthChecker from './AuthChecker';
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter } from 'mdbreact';
 
 
 class Login extends Component{
@@ -42,24 +43,81 @@ class Login extends Component{
 
         if (redirectToReferrer) return <Redirect to={from} />;
         return(
-
             <div className="loginBox">
-            <div>
-                Email: <input className="input-email" onChange={this.handleEmailChange} type="text"/>
-                Password: <input className="input-password" onChange={this.handlePasswordChange} type="password"/>
-                <button className="btn btn-primary" onClick={this.handleSubmit}>Login</button>
-
-                <p className="new-user"><a href='./register'>Non-profit? Join us to recycle the clothes...</a></p>
-            </div>
-
-
+            <MDBContainer>
+                <MDBRow>
+                    <MDBCol md="6">
+                        <MDBCard>
+                            <MDBCardBody className="mx-4">
+                                <div className="text-center">
+                                    <h3 className="dark-grey-text mb-5">
+                                        <strong>Sign in</strong>
+                                    </h3>
+                                </div>
+                            <MDBInput 
+                            label="Your email"
+                            group
+                            type="email"
+                            validate
+                            error="wrong"
+                            success="right"
+                            onChange={this.handleEmailChange} 
+                            />
+                            <MDBInput
+                            label="Your password"
+                            group
+                            type="password"
+                            validate
+                            containerClass="mb-0"
+                            onChange={this.handlePasswordChange}
+                            />
+                            <p className="font-small blue-text d-flex justify-content-end pb-3">
+                            Forgot
+                            <a href="#!" className="blue-text ml-1">Password?</a>
+                            </p>
+                            <div className="text-center mb-3">
+                            <MDBBtn
+                            type="button"
+                            gradient="blue"
+                            rounded
+                            className="btn-block z-depth-1a">Sign in
+                            </MDBBtn>
+                        </div>
+                            <p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">or Sign in with:</p>
+                        <div className="row my-3 d-flex justify-content-center">
+                            <MDBBtn
+                            type="button"
+                            color="white"
+                            rounded
+                            className="mr-md-3 z-depth-1a">
+                            <MDBIcon icon="facebook" className="blue-text text-center" /></MDBBtn>
+                            <MDBBtn
+                            type="button"
+                            color="white"
+                            rounded
+                            className="mr-md-3 z-depth-1a">
+                            <MDBIcon icon="twitter" className="blue-text" /></MDBBtn>
+                            <MDBBtn
+                            type="button"
+                            color="white"
+                            rounded
+                            className="z-depth-1a">
+                            <MDBIcon icon="google-plus" className="blue-text" /></MDBBtn>
+                        </div>
+                        </MDBCardBody>
+                    <MDBModalFooter className="mx-5 pt-3 mb-1">
+                    <p className="font-small grey-text d-flex justify-content-end">Not a member?
+                        <a href="./register" className="blue-text ml-1">Non-profit? Join us to recycle the clothes...</a>
+                    </p>
+                    </MDBModalFooter>
+                    </MDBCard>
+                </MDBCol>
+            </MDBRow>
+        </MDBContainer>
             <div className="login-status">
                 <p className="status">{this.state.authMessage}</p>
             </div>
-            </div>
-
-
-
+        </div>
         )
     }
 }
