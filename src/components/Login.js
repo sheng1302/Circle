@@ -80,7 +80,9 @@ class Login extends Component{
                             type="button"
                             gradient="blue"
                             rounded
-                            className="btn-block z-depth-1a">Sign in
+                            className="btn-block z-depth-1a"
+                            onClick={this.handleSubmit}
+                            >Sign in
                             </MDBBtn>
                         </div>
                             <p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">or Sign in with:</p>
