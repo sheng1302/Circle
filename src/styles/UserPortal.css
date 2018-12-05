@@ -1,9 +1,19 @@
 .row{
-    margin: 0px;
+    margin: 0;
+}
+
+.container{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+}
+
+.user-portal-form{
+    margin: 0 auto;
 }
 
 .User-Portal{
-    margin: auto; 
+    background-image: url('../sources/login-bg.jpg');
 }
 
 #donateText{
@@ -13,3 +23,4 @@
 .text{
     color: black;
 }
+

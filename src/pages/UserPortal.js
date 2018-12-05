@@ -7,12 +7,12 @@ class UserPortal extends Component{
     render(){
         return(
             <div className="User-Portal">
-            <MDBContainer className="mt-5 mb-5">
+            <MDBContainer className="d-flex justify-content-center">
                 <MDBRow>
-                    <MDBCol md="6">
+                    <MDBCol md="12">
                         <MDBCard>
                             <MDBCardBody>
-                                <form>
+                                <form className="user-portal-form">
                                     <p className="h4 text-center py-4" id="donateText">Donate Now!</p>
                                     <p className="text">Our non profit organizations will contact you once we receive your information.</p>
                                     <br/>
@@ -24,6 +24,9 @@ class UserPortal extends Component{
                                     <br />
                                     <label htmlFor="defaultFormCardEmailEx" className="grey-text font-weight-light">Your phone number</label>
                                     <input type="tel" id="defaultFormCardPhoneEx" className="form-control"  placeholder="145-385-8796"/>
+                                    <br />
+                                    <label htmlFor="defaultFormCardEmailEx" className="grey-text font-weight-light">Enter Pickup Address</label>
+                                    <input type="text" id="defaultFormCardAddressEx" className="form-control"  placeholder="199 Chamber Street. Brooklyn NY 11204"/>
                                     <br />
                                     <label htmlFor="defaultFormCardTextEx" className="grey-text font-weight-light">Things you want to donate</label>
                                     <div className="form-check">
