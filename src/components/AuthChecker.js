@@ -24,6 +24,8 @@ const authChecker = {
         })
             .then( (body) => {
                 if(this.isAuthenticated){
+                    this.uid = body.id;
+                    console.log(this.uid);
                     cb();
                 } else{
                     cb_failAuth(body.message[0]);

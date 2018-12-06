@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import login from './Login';
+import AuthChecker from './AuthChecker';
+
+
 
 class ItemBox extends Component {
   render() {
@@ -8,7 +12,7 @@ class ItemBox extends Component {
             <ItemImage imageSource={this.props.image} />
             <Category category={this.props.category} />
             <DateModified date={this.props.date} />
-            <ItemDescription description={this.props.description}/>
+            <ItemDescription description={this.props.description}/>        
         </div>
     );
   }
