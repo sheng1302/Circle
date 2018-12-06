@@ -35,35 +35,36 @@ class About extends Component{
 
                 <Jumbotron className="team-Jumbotron">
                     <h1>Meet our Team</h1>
-                <Container className='team-container justify-content-center'>
+                    <Container className='team-container'>
+
                     <Row className='row'>
                         <Col id='sheng' className='col-lg-6' lg={6}>
-                            <img class ="rounded-circle" src={ShengIMG} alt="Generic placeholder image" width="200" height="200" />
+                            <img className ="rounded-circle" src={ShengIMG} alt="Generic placeholder image" width="200" height="200" />
                             <h2>Sheng Liu</h2>
                             <p>Computer Science Major in Brooklyn College</p>
                             <p>Full Stack Developer</p>
-                            <p><a class="btn btn-secondary" href="#sheng" role="button">View details &raquo;</a></p>
+                            <p><a className="btn btn-secondary" href="#sheng" role="button">View details &raquo;</a></p>
                         </Col>
                         <Col className='col-lg-6' lg={6}>
-                        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="200" height="200" />
+                        <img className="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="200" height="200" />
                         <h2>Kevin Thaw</h2>
                         <p></p>
-                        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                        <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                         </Col>
                     </Row>
 
                     <Row  className='row'>
                         <Col className='col-lg-6' lg={6}>
-                        <img class="rounded-circle" src={RachelIMG} alt="Generic placeholder image" width="200" height="200" />
+                        <img className="rounded-circle" src={RachelIMG} alt="Generic placeholder image" width="200" height="200" />
                         <h2>Rachel Chen</h2>
                         <p>Computer Information System Major in Baruch College</p>
-                        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                        <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                         </Col>
                         <Col className='col-lg-6' lg={6}>
-                        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="200" height="200" />
+                        <img className="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="200" height="200" />
                         <h2>Jane Chen</h2>
                         <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-                        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                        <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                         </Col>
                     </Row>
                 </Container>
