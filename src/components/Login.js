@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Redirect } from 'react-router-dom';
 import AuthChecker from './AuthChecker';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter } from 'mdbreact';
-
+import '../styles/Login.css';
 
 class Login extends Component{
     constructor(props){
@@ -43,7 +43,7 @@ class Login extends Component{
 
         if (redirectToReferrer) return <Redirect to={from} />;
         return(
-            <div className="loginBox">
+            <div className="loginBox parallax-visual">
             <MDBContainer className="d-flex justify-content-center">
                 <MDBRow>
                     <MDBCol>

@@ -37,14 +37,15 @@ class About extends Component{
 
                 <Jumbotron className="team-Jumbotron">
                     <h1>Meet our Team</h1>
-                <Container className='team-container justify-content-center'>
+                    <Container className='team-container'>
+
                     <Row className='row'>
                         <Col id='sheng' className='col-lg-6' lg={6}>
-                            <img class ="rounded-circle" src={ShengIMG} alt="Generic placeholder image" width="200" height="200" />
+                            <img className ="rounded-circle" src={ShengIMG} alt="Generic placeholder image" width="200" height="200" />
                             <h2>Sheng Liu</h2>
                             <p>Computer Science Major at Brooklyn College</p>
                             <p>Full Stack Developer</p>
-                            <p><a class="btn btn-secondary" href="#sheng" role="button">View details &raquo;</a></p>
+                            <p><a className="btn btn-secondary" href="#sheng" role="button">View details &raquo;</a></p>
                         </Col>
                         <Col className='col-lg-6' lg={6}>
                         <img class="rounded-circle" src={KevinIMG} alt="Generic placeholder image" width="200" height="200" />
@@ -56,17 +57,19 @@ class About extends Component{
 
                     <Row  className='row'>
                         <Col className='col-lg-6' lg={6}>
-                        <img class="rounded-circle" src={RachelIMG} alt="Generic placeholder image" width="200" height="200" />
+                        <img className="rounded-circle" src={RachelIMG} alt="Generic placeholder image" width="200" height="200" />
                         <h2>Rachel Chen</h2>
-                        <p>Computer Information System Major at Baruch College</p>
-                        <p>Front-end Developer</p>
-                        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                        <p>Computer Information System Major in Baruch College</p>
+                        <p>Front-end Devloper</p>
+                        <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                         </Col>
+
                         <Col className='col-lg-6' lg={6}>
                         <img class="rounded-circle" src={JaneIMG} alt="Generic placeholder image" width="200" height="200" />
                         <h2>Jane Chen</h2>
                         <p>Computer Science Major at The City College of New York</p>
                         <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+
                         </Col>
                     </Row>
                 </Container>

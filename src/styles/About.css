@@ -38,6 +38,11 @@
     background: white;
     box-shadow: none;
     box-sizing: content-box;
+    align-content: center;
+}
+
+.team-container{
+    align-content: center;
 }
 
 .background-container2{
@@ -59,6 +64,7 @@
 .team-container .col-lg-4 {
     margin-bottom: 1.5rem;
     text-align: center;
+
   }
   .team-container h2 {
     font-weight: 400;
