@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter } from 'mdbreact';
 import AuthChecker from "./AuthChecker";
+import '../styles/Register.css';
 
 class Register extends Component{
 
@@ -77,9 +78,9 @@ class Register extends Component{
 
     render(){
         return(
-            <div className="nonprofit-registration-portal">
+            <div className="nonprofit-registration-portal parallax-visual">
 
-                <MDBContainer className="d-flex justify-content-center">
+                <MDBContainer className="d-flex justify-content-center ">
                     <MDBRow>
                         <MDBCol >
                             <MDBCard>
