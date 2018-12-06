@@ -71,6 +71,7 @@ class Login extends Component{
                             containerClass="mb-0"
                             onChange={this.handlePasswordChange}
                             />
+                            <p className="font-small d-flex justify-content-end pb-3 status">{this.state.authMessage}</p>
                             <p className="font-small blue-text d-flex justify-content-end pb-3">
                             Forgot
                             <a href="#!" className="blue-text ml-1">Password?</a>
@@ -120,9 +121,7 @@ class Login extends Component{
                 </MDBCol>
             </MDBRow>
         </MDBContainer>
-            <div className="login-status">
-                <p className="status">{this.state.authMessage}</p>
-            </div>
+
         </div>
         )
     }
