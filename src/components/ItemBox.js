@@ -5,7 +5,7 @@ class ItemBox extends Component {
     return (
         <div className="box-item">
             <ItemTitle title={this.props.title} />
-            <ItemImage image-source="#" />
+            <ItemImage imageSource={this.props.image} />
             <Category category={this.props.category} />
             <DateModified date={this.props.date} />
             <ItemDescription description={this.props.description}/>
@@ -25,7 +25,7 @@ class ItemTitle extends Component {
 class ItemImage extends Component {
     render() {
         return (
-        <img src="{this.props.image-source}" alt="alternate item image" />
+        <img src={this.props.imageSource} alt="alternate item image" />
         );
     }
 }
