@@ -40,7 +40,7 @@ class NonProfitPortal extends Component{
 
                             <div className="col-md-3">
                                 {this.state.items.map((item) => {
-                                    return <ItemBox title={item.description} category={item.category} date={item.createdAt} description={item.description} image={item.item_pic_url}></ItemBox>
+                                    return <ItemBox title={item.description} category={item.category} date={item.createdAt} description={item.description} image={item.item_pic_url} address={item.pick_up_address}></ItemBox>
 
                                     })
                                 }

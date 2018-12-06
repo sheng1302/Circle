@@ -12,6 +12,7 @@ class ItemBox extends Component {
             <ItemImage imageSource={this.props.image} />
             <Category category={this.props.category} />
             <DateModified date={this.props.date} />
+            <ItemAddress address={this.props.address} />
             <ItemDescription description={this.props.description}/>        
         </div>
     );
@@ -29,7 +30,7 @@ class ItemTitle extends Component {
 class ItemImage extends Component {
     render() {
         return (
-        <img src={this.props.imageSource} alt="alternate item image" />
+        <img src={this.props.imageSource} height="300px" width="600px" alt="alternate item image" />
         );
     }
 }
@@ -40,6 +41,18 @@ class ItemDescription extends Component {
         <div class="description">
             <p>
             {this.props.description}
+            </p>
+        </div>
+        );
+    }
+}
+
+class ItemAddress extends Component {
+    render() {
+        return (
+        <div class="address">
+            <p>
+            {this.props.address}
             </p>
         </div>
         );
