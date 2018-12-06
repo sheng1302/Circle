@@ -6,6 +6,7 @@ import { Container, Row, Col } from 'react-grid-system';
 import ShengIMG from '../sources/sheng.jpg';
 import RachelIMG from '../sources/rachel.jpg';
 import JaneIMG from '../sources/jane.jpg';
+import KevinIMG from '../sources/kevin.jpg';
 
 class About extends Component{
 
@@ -47,10 +48,10 @@ class About extends Component{
                             <p><a className="btn btn-secondary" href="#sheng" role="button">View details &raquo;</a></p>
                         </Col>
                         <Col className='col-lg-6' lg={6}>
-                        <img className="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="200" height="200" />
+                        <img class="rounded-circle" src={KevinIMG} alt="Generic placeholder image" width="200" height="200" />
                         <h2>Kevin Thaw</h2>
-                        <p></p>
-                        <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                        <p>Computer Science Major at Brooklyn College</p>
+                        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                         </Col>
                     </Row>
 
@@ -58,8 +59,8 @@ class About extends Component{
                         <Col className='col-lg-6' lg={6}>
                         <img className="rounded-circle" src={RachelIMG} alt="Generic placeholder image" width="200" height="200" />
                         <h2>Rachel Chen</h2>
-
                         <p>Computer Information System Major in Baruch College</p>
+                        <p>Front-end Devloper</p>
                         <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                         </Col>
 
