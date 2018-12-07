@@ -12,7 +12,6 @@ class HomePage extends Component{
                         <br/>
 
                         <div className="display">
-
                             <h3 className="display-h">Help Us Recycling The Clothes</h3>
                         </div>
 

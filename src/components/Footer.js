@@ -3,8 +3,6 @@ import logo from '../sources/circle_logo.png';
 import '../styles/Footer.css'; // using footer style
 
 class Footer extends Component{
-
-
     render() {
         return(
             <div className="company-background-container">
@@ -15,15 +13,13 @@ class Footer extends Component{
 
                 <div className="container-section-two">
                     <p className="section-two-copyright">
-                        Copyright &copy; 2018 Circle. All Right Reserved.
+                        Copyright &copy; 2018 Circle. All Rights Reserved.
                     </p>
-
                 </div>
 
             </div>
         )
     }
-
 }
 
 export default Footer;
