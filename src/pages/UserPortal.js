@@ -24,7 +24,7 @@ class UserPortal extends Component{
         data.append('ownder_id',2);
         data.append('category',this.state.donationCategory);
         data.append('pick_up_address',this.state.pickUpAddress);
-        data.append('reserved_status',this.state.fileDetail);
+        data.append('reserved_status',false);
         data.append('description',this.state.description);
 
         fetch('/items/', {
@@ -32,7 +32,8 @@ class UserPortal extends Component{
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
                 },
-                body: data
+                body: data,
+                enctype:"multipart/form-data"
             }
         )
             .then( (res) => {
@@ -117,8 +118,8 @@ class UserPortal extends Component{
                     <MDBCol md="12">
                         <MDBCard>
                             <MDBCardBody>
-                                <form className="user-portal-form" encType="multipart/form-data">
-
+                            <form className="user-portal-form" encType="multipart/form-data">
+                                    
                                     <p className="h4 text-center py-4" id="donateText">Donate Now!</p>
                                     <p className="text">Our non profit organizations will contact you once we receive your information.</p>
                                     <br/>
@@ -162,6 +163,7 @@ class UserPortal extends Component{
                                     <div className="input-group">
                                         <div className="custom-file">
                                             <input
+                                                name= 'image'
                                                 type="file"
                                                 className="custom-file-input"
                                                 id="inputGroupFile01"
