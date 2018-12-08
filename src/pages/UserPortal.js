@@ -29,7 +29,7 @@ class UserPortal extends Component{
 
         fetch('/items/', {
                 method: 'POST',
-                body: data
+                body: data,
             }
         )
             .then( (res) => {
@@ -114,8 +114,8 @@ class UserPortal extends Component{
                     <MDBCol md="12">
                         <MDBCard>
                             <MDBCardBody>
-                                <form className="user-portal-form" encType="multipart/form-data">
-
+                            <form className="user-portal-form" encType="multipart/form-data">
+                                    
                                     <p className="h4 text-center py-4" id="donateText">Donate Now!</p>
                                     <p className="text">Our non profit organizations will contact you once we receive your information.</p>
                                     <br/>
@@ -159,6 +159,7 @@ class UserPortal extends Component{
                                     <div className="input-group">
                                         <div className="custom-file">
                                             <input
+                                                name= 'image'
                                                 type="file"
                                                 name="image"
                                                 className="custom-file-input"
