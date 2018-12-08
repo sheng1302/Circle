@@ -14,6 +14,7 @@ class UserPortal extends Component{
             pickUpAddress : '',
             donationCategory : '',
             description : '',
+            formStatus : '',
 
         }
     }
@@ -21,7 +22,7 @@ class UserPortal extends Component{
     handleSubmit = (e) => {
         const data = new FormData();
         data.append('image', this.state.fileDetail);
-        data.append('owner_id','14bf1760-f8ef-11e8-9c16-5959a949ce54');
+        data.append('owner_id','d2348160-f901-11e8-9efe-b167b32167f6');
         data.append('category',this.state.donationCategory);
         data.append('pick_up_address',this.state.pickUpAddress);
         data.append('reserved_status',false);
@@ -33,11 +34,21 @@ class UserPortal extends Component{
             }
         )
             .then( (res) => {
-                return res.json();
+                console.log('status code', res.status);
+                if(res.status === 201){
+                    return res.json();
+                } else if (res.status === 500) {
+                    this.setState({ formStatus : 'Unexpected Error, please make sure you fill out all the inputs correctly.' });
+                }else{
+                    console.log(res.message);
+                    this.setState({ formStatus : 'Unexpected Error, please try again later' });
+                }
+
+
             })
             .then(
                 (data) => {
-                    console.log(data.message);
+                    this.setState({ formStatus : data.message });
                 }
             )
             .catch(
@@ -172,7 +183,8 @@ class UserPortal extends Component{
                                             </label>
                                         </div>
                                     </div>
-
+                                <br/> <br/>
+                                <p>{this.state.formStatus}</p>
                                     <div className="text-center py-4 mt-3">
                                         <MDBBtn type="button" gradient="blue" rounded className="btn-block z-depth-1a" onClick={this.handleSubmit}>Submit</MDBBtn>
                                     </div>
