@@ -4,6 +4,7 @@ const authChecker = {
     authenticate(email, pass, cb, cb_failAuth){
         fetch('/auth/login',{
             method: 'POST',
+            uid: '1',
             headers: {
                 "Content-Type": "application/json; charset=utf-8",
             },
@@ -24,8 +25,8 @@ const authChecker = {
         })
             .then( (body) => {
                 if(this.isAuthenticated){
-                    this.uid = body.id;
-                    console.log(this.uid);
+                    this.uid = body.user_id;
+                    console.log("hihiiiii  " + this.uid)
                     cb();
                 } else{
                     cb_failAuth(body.message[0]);
