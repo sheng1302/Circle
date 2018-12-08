@@ -21,17 +21,14 @@ class UserPortal extends Component{
     handleSubmit = (e) => {
         const data = new FormData();
         data.append('image', this.state.fileDetail);
-        data.append('ownder_id',2);
+        data.append('owner_id','14bf1760-f8ef-11e8-9c16-5959a949ce54');
         data.append('category',this.state.donationCategory);
         data.append('pick_up_address',this.state.pickUpAddress);
-        data.append('reserved_status',this.state.fileDetail);
+        data.append('reserved_status',false);
         data.append('description',this.state.description);
 
         fetch('/items/', {
                 method: 'POST',
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                },
                 body: data
             }
         )
@@ -105,7 +102,7 @@ class UserPortal extends Component{
 
     handleDescriptionChange = (e) => {
 
-        this.setState({donationCategory : e.target.value});
+        this.setState({description: e.target.value});
 
     };
 
@@ -163,6 +160,7 @@ class UserPortal extends Component{
                                         <div className="custom-file">
                                             <input
                                                 type="file"
+                                                name="image"
                                                 className="custom-file-input"
                                                 id="inputGroupFile01"
                                                 aria-describedby="inputGroupFileAddon01"
