@@ -183,9 +183,10 @@ class UserPortal extends Component{
                                             </label>
                                         </div>
                                     </div>
-                                <br/> <br/>
-                                <p>{this.state.formStatus}</p>
+
+
                                     <div className="text-center py-4 mt-3">
+                                        <p>{this.state.formStatus}</p>
                                         <MDBBtn type="button" gradient="blue" rounded className="btn-block z-depth-1a" onClick={this.handleSubmit}>Submit</MDBBtn>
                                     </div>
                                 </form>
