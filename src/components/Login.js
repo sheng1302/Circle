@@ -86,31 +86,6 @@ class Login extends Component{
                             >Sign in
                             </MDBBtn>
                         </div>
-                            <p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">or Sign in with:</p>
-                        <MDBRow className="d-flex justify-content-center">
-                            <MDBBtn
-                            type="button"
-                            color="white"
-                            rounded
-                            >
-                                <MDBIcon icon="facebook" className="blue-text text-center" />
-                            </MDBBtn>
-                            <MDBBtn
-                            type="button"
-                            color="white"
-                            rounded
-                            >
-                                <MDBIcon icon="twitter" className="blue-text" />
-                            </MDBBtn>
-                            <MDBBtn
-                            type="button"
-                            color="white"
-                            rounded
-                            >
-                                <MDBIcon icon="google-plus" className="blue-text" />
-
-                            </MDBBtn>
-                        </MDBRow>
                         </MDBCardBody>
                     <MDBModalFooter className="mx-5 pt-3 mb-1">
                     <p className="font-small grey-text d-flex justify-content-end">Not a member?

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../sources/circle_logo.png';
-import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink} from 'mdbreact';
+import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu,  DropdownItem, Fa} from 'mdbreact';
+
 
 class Header extends Component {
     constructor(props) {
@@ -39,10 +40,16 @@ class Header extends Component {
                     </NavbarNav>
                     <NavbarNav right>
                         <NavItem>
-                        {/* <form className="form-inline md-form mt-0">
-                            <input className="form-control mr-sm-2 mb-0 text-white" type="text" placeholder="Search" aria-label="Search"/>
-                        </form> */}
-                        
+                            <Dropdown>
+                                <DropdownToggle nav caret>
+                                    <Fa icon="user" />Login
+                                </DropdownToggle>
+                                <DropdownMenu className="dropdown-default" right>
+                                    <DropdownItem href="#!">Profile</DropdownItem>
+                                    <DropdownItem href="#!">Reserved Items</DropdownItem>
+                                    <DropdownItem href="#!">Logout</DropdownItem>
+                                </DropdownMenu>
+                            </Dropdown>
                         </NavItem>
                     </NavbarNav>
                 </Collapse>

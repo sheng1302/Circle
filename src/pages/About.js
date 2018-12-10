@@ -71,7 +71,7 @@ class About extends Component{
                         <h2>Rachel Chen</h2>
                         <p>Computer Information System Major in Baruch College</p>
                         <p>Front-end Developer</p>
-                        <p><a className="btn btn-secondary" href="#" role="button">LinkedIn</a></p>
+                        <p><a className="btn btn-secondary" href="https://www.linkedin.com/in/rachelchen18/" role="button">LinkedIn</a></p>
                         </Col>
 
                         <Col className='col-lg-6' lg={6}>
