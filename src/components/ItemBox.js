@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import login from './Login';
 import AuthChecker from './AuthChecker';
-
 
 
 class ItemBox extends Component {
@@ -70,13 +68,13 @@ class ItemReserve extends Component {
                 reserved_status: this.state.reserved_status,
             })
         }).then((res) => {
-            console.log(res)
+            console.log(res);
             return res.json();
         }).then((data) => {
             this.setState({
                 reserved_status: true,
-            })
-            console.log(data);
+            });
+
         }).catch((err) => {
             console.log('error', err);
         })

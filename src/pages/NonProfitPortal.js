@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import '../styles/NonProfitPortal.css';
 import ItemBox from '../components/ItemBox';
 import sizeMe from 'react-sizeme';
 import StackGrid, { transitions } from "react-stack-grid";
@@ -30,37 +29,26 @@ class NonProfitPortal extends Component{
         return(
             <div className="NonProfit-Portal">
 
-                                {this.state.items.map((item) => {
-                                return (<StackGrid 
-                                            columnWidth={width <= 768 ? '100%' : '33.33%'}>
-                                        <div key="key1"><ItemBox title={item.description} 
+
+                                {this.state.items.map((item, index) => {
+                                    return (
+                                        <StackGrid columnWidth={width <= 768 ? '100%' : '33.3%'}>
+
+                                        <div id={index+1} key={"key1"}>
+                                            <ItemBox title={item.description}
                                                     category={item.category} 
                                                     date={item.createdAt} 
                                                     description={item.description} 
                                                     image={item.item_pic_url} 
                                                     address={item.pick_up_address} 
-                                                    item={item}></ItemBox>
+                                                    item={item} /> {/*item is the item itself to be reference ..*/}
                                         </div>
-                                        <div key="key2"><ItemBox title={item.description} 
-                                                    category={item.category} 
-                                                    date={item.createdAt} 
-                                                    description={item.description} 
-                                                    image={item.item_pic_url} 
-                                                    address={item.pick_up_address} 
-                                                    item={item}></ItemBox>
-                                        </div>
-                                        <div key="key3"><ItemBox title={item.description} 
-                                                    category={item.category} 
-                                                    date={item.createdAt} 
-                                                    description={item.description} 
-                                                    image={item.item_pic_url} 
-                                                    address={item.pick_up_address} 
-                                                    item={item}></ItemBox>
-                                        </div>
-                                       </StackGrid>
-                                        );
-                                    })
+                                        </StackGrid>
+
+
+                                    )})
                                 }
+
                 </div>
         );
     }

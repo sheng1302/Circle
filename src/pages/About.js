@@ -7,6 +7,7 @@ import ShengIMG from '../sources/sheng.jpg';
 import RachelIMG from '../sources/rachel.jpg';
 import JaneIMG from '../sources/jane.jpg';
 import KevinIMG from '../sources/kevin.jpg';
+import Footer from "../components/Footer";
 
 class About extends Component{
 
@@ -24,8 +25,8 @@ class About extends Component{
                 
                 <div className="second-section">
                 <Jumbotron className="content-container">
-                    <div class="row">
-                        <div class="col-md-10 offset-md-1">
+                    <div className="row">
+                        <div className="col-md-10 offset-md-1">
                             <h2>Our Mission</h2>
                             <p>Circle encourages communities to decrease the amount of secondhand (but still useful!) items that get sent to landfills and recycling centers by prioritizing reusing over recycling.</p>
 
@@ -58,10 +59,10 @@ class About extends Component{
                         </Col>
 
                         <Col className='col-lg-6' lg={6}>
-                        <img class="rounded-circle" src={KevinIMG} alt="Generic placeholder image" width="200" height="200" />
+                        <img className="rounded-circle" src={KevinIMG} alt="Generic placeholder image" width="200" height="200" />
                         <h2>Kevin Thaw</h2>
                         <p>Computer Science Major at Brooklyn College</p>
-                        <p><a class="btn btn-secondary" href="#" role="button">LinkedIn</a></p>
+                        <p><a className="btn btn-secondary" href="#" role="button">LinkedIn</a></p>
                         </Col>
                     </Row>
 
@@ -75,16 +76,18 @@ class About extends Component{
                         </Col>
 
                         <Col className='col-lg-6' lg={6}>
-                        <img class="rounded-circle" src={JaneIMG} alt="Generic placeholder image" width="200" height="200" />
+                        <img className="rounded-circle" src={JaneIMG} alt="Generic placeholder image" width="200" height="200" />
                         <h2>Jane Chen</h2>
                         <p>Computer Science Major at The City College of New York</p>
                         <p>Software Engineer and Data Analyst</p>
-                        <p><a class="btn btn-secondary" href="#" role="button">LinkedIn</a></p>
+                        <p><a className="btn btn-secondary" href="#" role="button">LinkedIn</a></p>
 
                         </Col>
                     </Row>
                 </Container>
                 </Jumbotron>
+            <Footer/>
+
             </div>
         )
     }

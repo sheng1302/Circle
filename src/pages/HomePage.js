@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Footer from "../components/Footer";
 import '../styles/HomePage.css';
 
 class HomePage extends Component{
@@ -24,6 +25,8 @@ class HomePage extends Component{
 
                     </div>
                 </div>
+                <Footer/>
+
             </div>
         )
     }

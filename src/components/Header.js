@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from '../sources/circle_logo.png';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu,  DropdownItem, Fa} from 'mdbreact';
-
+import {Link} from 'react-router-dom';
+import AuthChecker from './AuthChecker';
 
 class Header extends Component {
     constructor(props) {
@@ -9,6 +10,8 @@ class Header extends Component {
         this.state = {
             collapse: false,
             isWideEnough: false,
+            loginStatus: 'Login', // either login or logout
+            authRoute: '/login', // either jump to login or logout route.
         };
     this.onClick = this.onClick.bind(this);
     }
@@ -42,12 +45,21 @@ class Header extends Component {
                         <NavItem>
                             <Dropdown>
                                 <DropdownToggle nav caret>
-                                    <Fa icon="user" />Login
+                                    <Fa icon="user">
+
+                                    {
+                                        (AuthChecker.isAuthenticated) ? 'Hi, ' : 'Login'
+                                    }
+                                    </Fa>
+
                                 </DropdownToggle>
                                 <DropdownMenu className="dropdown-default" right>
-                                    <DropdownItem href="#!">Profile</DropdownItem>
-                                    <DropdownItem href="#!">Reserved Items</DropdownItem>
-                                    <DropdownItem href="#!">Logout</DropdownItem>
+                                    <DropdownItem><Link to={
+                                        (AuthChecker.isAuthenticated) ? '/logout' : '/Login'
+                                    }>{
+                                        (AuthChecker.isAuthenticated) ? 'Logout ' : 'Login'
+                                    }</Link></DropdownItem>
+                                    <DropdownItem>Reserved Items</DropdownItem>
                                 </DropdownMenu>
                             </Dropdown>
                         </NavItem>

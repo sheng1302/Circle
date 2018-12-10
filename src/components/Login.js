@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import AuthChecker from './AuthChecker';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter } from 'mdbreact';
 import '../styles/Login.css';
+import Footer from "./Footer";
 
 class Login extends Component{
     constructor(props){
@@ -97,6 +98,8 @@ class Login extends Component{
             </MDBRow>
         </MDBContainer>
 
+
+                <Footer/>
         </div>
         )
     }

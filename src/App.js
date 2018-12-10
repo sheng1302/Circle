@@ -5,7 +5,6 @@ import UserPortal from "./pages/UserPortal";
 import NonprofitPortal from "./pages/NonProfitPortal";
 import About from "./pages/About";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Login from './components/Login';
 import Register from './components/Register';
 import PrivateRoute from './components/PrivateRoute';
@@ -25,9 +24,7 @@ class App extends Component {
                     <Route path="/about" component={About} />
                     <Route path="/login" component={Login} />
                     <Route path="/register" component={Register} />
-                    <Route path="/non-profit-test" component={NonprofitPortal} />
                     <PrivateRoute path="/non-profit" component={NonprofitPortal} />
-                <Footer/>
                 </div>
 
 
