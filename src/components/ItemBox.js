@@ -50,7 +50,7 @@ class ItemReserve extends Component {
     }
 
     componentDidUpdate(prevState){
-        if(this.state.reserved_status){
+        if(this.state.buttonText){
 
         }
     }
@@ -75,6 +75,7 @@ class ItemReserve extends Component {
         }).then((data) => {
             this.setState({
                 reserved_status: true,
+                buttonText: "Reserved"
             })
             console.log(data);
         }).catch((err) => {

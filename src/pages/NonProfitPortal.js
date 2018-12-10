@@ -17,6 +17,7 @@ class NonProfitPortal extends Component{
         .then((resp)=>{
             return resp.json();
         }).then((result)=>{
+            console.log("results +++ "  + result);
             this.setState({
                 items: result,
             })
