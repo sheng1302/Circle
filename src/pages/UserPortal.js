@@ -22,7 +22,11 @@ class UserPortal extends Component{
     handleSubmit = (e) => {
         const data = new FormData();
         data.append('image', this.state.fileDetail);
+<<<<<<< HEAD
         data.append('owner_id','0da1c970-ee93-11e8-b779-67094e78cc2d');
+=======
+        data.append('owner_id','a9995c10-fb47-11e8-b8d3-e5114123eff0');
+>>>>>>> 621190cfe6df20614d7eaf412c21f6444346c86c
         data.append('category',this.state.donationCategory);
         data.append('pick_up_address',this.state.pickUpAddress);
         data.append('reserved_status',false);

@@ -5,3 +5,7 @@
 .right-body-content{
     overflow-y: auto;
 }
+
+image {
+    size: 500px 500px;
+}
