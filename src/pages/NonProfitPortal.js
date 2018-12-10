@@ -1,8 +1,10 @@
 import React, {Component} from "react";
 import '../styles/NonProfitPortal.css';
-import SideBar from '../components/SideBar';
 import ItemBox from '../components/ItemBox';
+import sizeMe from 'react-sizeme';
+import StackGrid, { transitions } from "react-stack-grid";
 
+const { scaleDown } = transitions;
 
 class NonProfitPortal extends Component{
     constructor(props){
@@ -24,70 +26,44 @@ class NonProfitPortal extends Component{
     }
 
     render(){        
+        const { width } = this.props;
         return(
             <div className="NonProfit-Portal">
 
-                <div className="row row-controller">
-                    <div className="col-md-3">
-                        <SideBar/>
-                    </div>
-
-                    <div className="col-md-9 right-body-content">
-                        <div className="row">
-
-
-                            <div className="col-md-3">
                                 {this.state.items.map((item) => {
-                                    return <ItemBox title={item.description} category={item.category} date={item.createdAt} description={item.description} image={item.item_pic_url} address={item.pick_up_address} item={item}></ItemBox>
-
+                                return (<StackGrid 
+                                            columnWidth={width <= 768 ? '100%' : '33.33%'}>
+                                        <div key="key1"><ItemBox title={item.description} 
+                                                    category={item.category} 
+                                                    date={item.createdAt} 
+                                                    description={item.description} 
+                                                    image={item.item_pic_url} 
+                                                    address={item.pick_up_address} 
+                                                    item={item}></ItemBox>
+                                        </div>
+                                        <div key="key2"><ItemBox title={item.description} 
+                                                    category={item.category} 
+                                                    date={item.createdAt} 
+                                                    description={item.description} 
+                                                    image={item.item_pic_url} 
+                                                    address={item.pick_up_address} 
+                                                    item={item}></ItemBox>
+                                        </div>
+                                        <div key="key3"><ItemBox title={item.description} 
+                                                    category={item.category} 
+                                                    date={item.createdAt} 
+                                                    description={item.description} 
+                                                    image={item.item_pic_url} 
+                                                    address={item.pick_up_address} 
+                                                    item={item}></ItemBox>
+                                        </div>
+                                       </StackGrid>
+                                        );
                                     })
                                 }
-                            </div>
-                        </div>
-
-                        {/*
-                        <div className="row">
-                            <div className="col-md-3">
-                                <ItemBox message="this is an item box" />
-                            </div>
-                            <div className="col-md-3">
-                                <ItemBox message="this is an item box" />
-                            </div>
-                            <div className="col-md-3">
-                                <ItemBox message="this is an item box" />
-                            </div>
-                        </div>
-
-                        <div className="row">
-                            <div className="col-md-3">
-                                <ItemBox message="this is an item box" />
-                            </div>
-                            <div className="col-md-3">
-                                <ItemBox message="this is an item box" />
-                            </div>
-                            <div className="col-md-3">
-                                <ItemBox message="this is an item box" />
-                            </div>
-                        </div>
-
-                        <div className="row">
-                            <div className="col-md-3">
-                                <ItemBox message="this is an item box" />
-                            </div>
-                            <div className="col-md-3">
-                                <ItemBox message="this is an item box" />
-                            </div>
-                            <div className="col-md-3">
-                                <ItemBox message="this is an item box" />
-                            </div>
-                        </div>
-                        */}
-                    </div>
-
                 </div>
-            </div>
-        )
+        );
     }
 }
 
-export default NonProfitPortal;
+export default sizeMe()(NonProfitPortal);

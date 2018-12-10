@@ -91,7 +91,7 @@ class ItemReserve extends Component {
 class ItemImage extends Component {
     render() {
         return (
-        <img src={this.props.imageSource} height="300px" width="600px" alt="alternate item image" />
+        <img src={this.props.imageSource} max-height="100%" max-width="100%" alt="alternate item image" />
         );
     }
 }
