@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import AuthChecker from './AuthChecker';
-
+import ItemTitle from './ItemTitle';
+import ItemImage from './ItemImage';
+import ItemDescription from './ItemDescription';
+import ItemAddress from './ItemAddress';
+import Category from './Category';
+import DateModified from './DateModified';
 
 class ItemBox extends Component {
   render() {
@@ -12,18 +17,12 @@ class ItemBox extends Component {
             <DateModified date={this.props.date} />
             <ItemAddress address={this.props.address} />
             <ItemDescription description={this.props.description}/>
-            <ItemReserve item= {this.props.item} />        
+            <ItemReserve
+                item= {this.props.item}
+                buttonLabel={this.props.buttonLabel}/>
         </div>
     );
   }
-}
-
-class ItemTitle extends Component {
-    render() {
-        return (
-            <h3 className="item-title">{this.props.title}</h3>
-        );
-    }
 }
 
 class ItemReserve extends Component {
@@ -41,19 +40,14 @@ class ItemReserve extends Component {
     }
 
     componentDidMount(){
-        let buttonText = (this.state.reserved_status ? "Reserved":"Reserve");
+
+        let buttonText = this.props.buttonLabel;
         this.setState({
             buttonText: buttonText,
         })
     }
 
-    componentDidUpdate(prevState){
-        if(this.state.reserved_status){
-
-        }
-    }
-
-    reserveItem(){
+    reserveItem = (e) => {
         fetch('/items/reserve/' + this.state.item_id, {
             method: 'PUT',
             headers: {
@@ -73,69 +67,27 @@ class ItemReserve extends Component {
         }).then((data) => {
             this.setState({
                 reserved_status: true,
+
+                buttonText: "Reserved"
+
             });
 
         }).catch((err) => {
             console.log('error', err);
         })
-    }
+    };
+
     render() {
         return (
-            <button onClick={this.reserveItem.bind(this)} disabled={this.state.reserved_status}>{this.state.buttonText}</button>
+            <button
+                onClick={this.reserveItem}
+                disabled={this.state.reserved_status}>{this.state.buttonText}
+
+            </button>
         );
     }
 }
 
-class ItemImage extends Component {
-    render() {
-        return (
-        <img src={this.props.imageSource} max-height="100%" max-width="100%" alt="alternate item image" />
-        );
-    }
-}
 
-class ItemDescription extends Component {
-    render() {
-        return (
-        <div className="description">
-            <p>
-            {this.props.description}
-            </p>
-        </div>
-        );
-    }
-}
-
-class ItemAddress extends Component {
-    render() {
-        return (
-        <div className="address">
-            <p>
-            {this.props.address}
-            </p>
-        </div>
-        );
-    }
-}
-
-class Category extends Component {
-    render() {
-        return (
-        <div className="category">
-            {this.props.category}
-        </div>
-        );
-    }
-}
-
-class DateModified extends Component {
-    render() {
-        return (
-        <div className="date-modified">
-            {this.props.date}
-        </div>
-        );
-    }
-}
 
 export default ItemBox;

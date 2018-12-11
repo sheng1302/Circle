@@ -3,6 +3,7 @@ import logo from '../sources/circle_logo.png';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu,  DropdownItem, Fa} from 'mdbreact';
 import {Link} from 'react-router-dom';
 import AuthChecker from './AuthChecker';
+import '../styles/Header.css';
 
 class Header extends Component {
     constructor(props) {
@@ -12,22 +13,24 @@ class Header extends Component {
             isWideEnough: false,
             loginStatus: 'Login', // either login or logout
             authRoute: '/login', // either jump to login or logout route.
+            display : 'hidden',
         };
-    this.onClick = this.onClick.bind(this);
-    }
 
-    onClick(){
+    };
+
+    handleOnClick = () => {
         this.setState({
             collapse: !this.state.collapse,
         });
-    }
-    render() {
+    };
+
+    render(){
         return (
             <Navbar color='green' dark expand="md" scrolling>
                 <NavbarBrand href="/">
                     <img src={logo} height="50" alt="logo"/>
                 </NavbarBrand>
-                { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
+                { !this.state.isWideEnough && <NavbarToggler onClick = { this.handleOnClick } />}
                 <Collapse isOpen = { this.state.collapse } navbar>
                     <NavbarNav left>
                         <NavItem>
@@ -48,18 +51,20 @@ class Header extends Component {
                                     <Fa icon="user">
 
                                     {
-                                        (AuthChecker.isAuthenticated) ? 'Hi, ' : 'Login'
+                                        (AuthChecker.isAuthenticated) ? ` ${AuthChecker.userName}, ` : 'Login'
                                     }
                                     </Fa>
 
                                 </DropdownToggle>
                                 <DropdownMenu className="dropdown-default" right>
-                                    <DropdownItem><Link to={
-                                        (AuthChecker.isAuthenticated) ? '/logout' : '/Login'
+                                    <DropdownItem><Link className={'dropdown-item-align'} to={
+                                        (AuthChecker.isAuthenticated) ? '/auth/signout' : '/Login'
                                     }>{
                                         (AuthChecker.isAuthenticated) ? 'Logout ' : 'Login'
                                     }</Link></DropdownItem>
-                                    <DropdownItem>Reserved Items</DropdownItem>
+                                    <DropdownItem className={
+                                    (AuthChecker.isAuthenticated) ? '' : 'hidden'
+                                    }><Link className={'dropdown-item-align'} to={'/reservation'}>Reserved Items</Link></DropdownItem>
                                 </DropdownMenu>
                             </Dropdown>
                         </NavItem>

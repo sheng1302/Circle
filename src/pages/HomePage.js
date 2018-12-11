@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Footer from "../components/Footer";
+import {Link} from 'react-router-dom';
 import '../styles/HomePage.css';
 
 class HomePage extends Component{
@@ -19,8 +20,8 @@ class HomePage extends Component{
                         <h3>"It's not at all important to get it right the first time. It's vitally important to get it right the last time."</h3>
 
                         <div className="s-buttons">
-                            <a className="btn-primary-white" href="./donate">Donate</a>
-                            <a className="btn-primary-white" href="./non-profit">Non-profit</a>
+                            <Link className="btn-primary-white" to={"./donate"}>Donate</Link>
+                            <Link className="btn-primary-white" to={"./non-profit"}>Non-profit</Link>
                         </div>
 
                     </div>

@@ -26,6 +26,8 @@ const authChecker = {
             .then( (body) => {
                 if(this.isAuthenticated){
                     this.uid = body.user_id;
+                    this.userName = body.username;
+                    console.log(body);
                     console.log("hihiiiii  " + this.uid)
                     cb();
                 } else{
