@@ -34,7 +34,9 @@ class ItemList extends Component{
                                              image={item.item_pic_url}
                                              address={item.pick_up_address}
                                              item={item}
-                                             buttonLabel={"reserve"}/> {/*item is the item itself to be reference ..*/}
+                                             buttonLabel={"reserve"}
+                                             completePhrase={"reserved"}
+                                             callFrom={"itemList"} /> {/*item is the item itself to be reference ..*/}
 
                                 </div>
                             );

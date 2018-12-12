@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AuthChecker from '../components/AuthChecker';
-import ItemList from '../components/ItemList';
+import ReservedItemList from '../components/ReservedItemList';
 
 
 class ReservationPortal extends Component{
@@ -14,11 +14,17 @@ class ReservationPortal extends Component{
     componentDidMount(){
         fetch(`/order/${AuthChecker.uid}`)
             .then((resp)=>{
-                return resp.json();
+                if(resp.status === 200){
+                    return resp.json();
+                }
+                console.log(resp.message);
             }).then((result)=>{
-            this.setState({
-                items: result,
-            })
+
+                console.log(result);
+                this.setState({items : result});
+
+            }).catch((err)=>{
+                console.log(err);
         })
     }
 
@@ -27,9 +33,9 @@ class ReservationPortal extends Component{
         return(
             <div className={'reservation-portal'}>
 
-                <ItemList
+                <ReservedItemList
                     itemList={this.state.items}
-                />
+                 />
             </div>
         )
     }
