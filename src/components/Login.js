@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Redirect } from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import AuthChecker from './AuthChecker';
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter } from 'mdbreact';
 import '../styles/Login.css';
@@ -90,7 +90,7 @@ class Login extends Component{
                         </MDBCardBody>
                     <MDBModalFooter className="mx-5 pt-3 mb-1">
                     <p className="font-small grey-text d-flex justify-content-end">Not a member?
-                        <a href="./register" className="blue-text ml-1">Non-profit? Join us to recycle the clothes...</a>
+                        <Link className="blue-text ml-1" to={"./register"}>Non-profit? Join us to recycle the clothes..</Link>
                     </p>
                     </MDBModalFooter>
                     </MDBCard>
@@ -99,7 +99,6 @@ class Login extends Component{
         </MDBContainer>
 
 
-                <Footer/>
         </div>
         )
     }

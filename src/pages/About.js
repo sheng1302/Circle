@@ -55,7 +55,7 @@ class About extends Component{
                             <h2>Sheng Liu</h2>
                             <p>Computer Science Major at Brooklyn College</p>
                             <p>Full Stack Developer</p>
-                            <p><a className="btn btn-secondary" href="#sheng" role="button">LinkedIn</a></p>
+                            <p><a className="btn btn-secondary" href="https://www.linkedin.com/in/sheng-liu13/" role="button">LinkedIn</a></p>
                         </Col>
 
                         <Col className='col-lg-6' lg={6}>
