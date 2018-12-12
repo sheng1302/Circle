@@ -93,7 +93,7 @@ class ItemReserve extends Component {
                 return res.json();
             }).then((data) => {
                 this.setState({
-                    reserved_status: true,
+                    complete_status: true,
                     buttonText: this.props.completePhrase
 
                 });

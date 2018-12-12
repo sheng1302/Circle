@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import StackGrid, {transitions} from "react-stack-grid";
 import ItemBox from "./ItemBox";
+import sizeMe from 'react-sizeme';
 
-
+const { scaleDown } = transitions;
 class ReservedItemList extends Component{
 
 
     render(){
         const { width } = this.props;
-        const { scaleDown } = transitions;
         return(
 
             <StackGrid
@@ -18,22 +18,24 @@ class ReservedItemList extends Component{
                 enter={scaleDown.enter}
                 entered={scaleDown.entered}
                 leaved={scaleDown.leaved}
+                gutterWidth={6}
+                gutterHeight={10}
                 monitorImagesLoaded={true}
-                duration={0}>
+            >
 
                 {
                     this.props.itemList.map((eachComponent, index) => {
 
                         return(
-                            <div id={index + 1} key={`key${index}`} >
-                                <ItemBox title={eachComponent.Item.description}
-                                         category={eachComponent.Item.category}
-                                         date={eachComponent.Item.createdAt}
+                            <div className="image" key={`key${index + 1}`} >
+                                <ItemBox //title={eachComponent.Item.description}
+                                         //category={eachComponent.Item.category}
+                                         //date={eachComponent.Item.createdAt}
                                          description={eachComponent.Item.description}
                                          image={eachComponent.Item.item_pic_url}
                                          address={eachComponent.Item.pick_up_address}
                                          item={eachComponent.Item}
-                                         buttonLabel={"Task Complete"}
+                                         buttonLabel={"Complete"}
                                          completePhrase={"Completed"}
                                          callFrom={"reservedItemList"}/> {/*item is the item itself to be reference ..*/}
 
@@ -51,4 +53,4 @@ class ReservedItemList extends Component{
 }
 
 
-export default ReservedItemList;
+export default sizeMe()(ReservedItemList);

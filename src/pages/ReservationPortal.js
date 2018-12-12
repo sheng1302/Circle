@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AuthChecker from '../components/AuthChecker';
 import ReservedItemList from '../components/ReservedItemList';
-
+import '../styles/NonProfitPortal.css';
 
 class ReservationPortal extends Component{
     constructor(props){

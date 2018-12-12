@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ItemBox from '../components/ItemBox';
+import ItemBox from './ItemBox';
 import sizeMe from 'react-sizeme';
 import StackGrid, {transitions} from "react-stack-grid";
 import ItemImage from "./ItemImage";
@@ -10,11 +10,7 @@ const { scaleDown } = transitions;
 class ItemList extends Component{
 
     render(){
-        const {
-            size: {
-                width
-            }
-        } = this.props;
+        const { width } = this.props;
 
         return(
 
@@ -43,9 +39,9 @@ class ItemList extends Component{
                                         image={item.item_pic_url}
                                         //address={item.pick_up_address}
                                         item={item}
-                                        //buttonLabel={"reserve"}
-                                        //completePhrase={"reserved"}
-                                        //callFrom={"itemList"}
+                                        buttonLabel={"reserve"}
+                                        completePhrase={"reserved"}
+                                        callFrom={"itemList"}
                                     />
                                 </div>
                             );
