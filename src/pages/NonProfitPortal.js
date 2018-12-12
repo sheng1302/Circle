@@ -25,7 +25,8 @@ class NonProfitPortal extends Component{
         return(
             <div className="NonProfit-Portal">
                 <ItemList
-                    itemList={this.state.items}/>
+                    itemList={this.state.items}
+                    />
             </div>
         );
     }

@@ -18,8 +18,10 @@ class ItemBox extends Component {
             <ItemAddress address={this.props.address} />
             <ItemDescription description={this.props.description}/>
             <ItemReserve
-                item= {this.props.item}
-                buttonLabel={this.props.buttonLabel}/>
+                item={this.props.item}
+                buttonLabel={this.props.buttonLabel}
+                completePhrase={this.props.completePhrase}
+                callFrom={this.props.callFrom}/>
         </div>
     );
   }
@@ -34,7 +36,7 @@ class ItemReserve extends Component {
             pick_up_date: "12/12/18",
             description: "Non Profit",
             order_status: "Requested",
-            reserved_status: this.props.item.reserved_status,
+            complete_status: false,
             buttonText: '',
         }
     }
@@ -47,41 +49,66 @@ class ItemReserve extends Component {
         })
     }
 
-    reserveItem = (e) => {
-        fetch('/items/reserve/' + this.state.item_id, {
-            method: 'PUT',
-            headers: {
-                "Content-Type": "application/json; charset=utf-8",
-            },
-            body: JSON.stringify({
-                item_id: this.state.item_id,
-                customer_id: this.state.customer_id,
-                pick_up_date: this.state.pick_up_date,
-                description: this.state.description,
-                order_status: this.state.order_status,
-                reserved_status: this.state.reserved_status,
+    markItem = () => {  // This is suppose to send a mark complete to the backend server.
+
+        // determine is marking an item for completion or reserve an item? What's the best way to do this ...
+        console.log(this.props);
+        if(this.props.callFrom === 'reservedItemList'){
+            fetch('/order/mark/' + this.state.item_id, {
+                method: 'PUT',
+                headers: {
+                    "Content-Type": "application/json; charset=utf-8",
+                },
+            }).then((res) => {
+                console.log(res);
+                return res.json();
+            }).then((data) => {
+                this.setState({
+                    complete_status: true,
+                    buttonText: this.props.completePhrase,
+
+                });
+
+            }).catch((err) => {
+                console.log('error', err);
             })
-        }).then((res) => {
-            console.log(res);
-            return res.json();
-        }).then((data) => {
-            this.setState({
-                reserved_status: true,
 
-                buttonText: "Reserved"
+        } else if(this.props.callFrom === 'itemList'){
+            fetch('/items/reserve/' + this.state.item_id, {
+                method: 'PUT',
+                headers: {
+                    "Content-Type": "application/json; charset=utf-8",
+                },
+                body: JSON.stringify({
+                    item_id: this.state.item_id,
+                    customer_id: this.state.customer_id,
+                    pick_up_date: this.state.pick_up_date,
+                    description: this.state.description,
+                    order_status: this.state.order_status,
+                    reserved_status: this.state.reserved_status,
+                })
+            }).then((res) => {
+                console.log(res);
+                return res.json();
+            }).then((data) => {
+                this.setState({
+                    reserved_status: true,
+                    buttonText: this.props.completePhrase
 
-            });
+                });
 
-        }).catch((err) => {
-            console.log('error', err);
-        })
+            }).catch((err) => {
+                console.log('error', err);
+            })
+        }
+
     };
 
     render() {
         return (
             <button
-                onClick={this.reserveItem}
-                disabled={this.state.reserved_status}>{this.state.buttonText}
+                onClick={this.markItem}
+                disabled={this.state.complete_status}>{this.state.buttonText}
 
             </button>
         );

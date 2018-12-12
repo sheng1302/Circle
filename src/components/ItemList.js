@@ -37,6 +37,8 @@ class ItemList extends Component{
                                              //address={item.pick_up_address}
                                              item={item}
                                              //buttonLabel={"reserve"}
+                                             //completePhrase={"reserved"}
+                                             //callFrom={"itemList"} /> 
                                     />
                                 </div>
                             );
