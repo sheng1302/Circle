@@ -178,6 +178,7 @@ class UserPortal extends Component{
                                                 id="inputGroupFile01"
                                                 aria-describedby="inputGroupFileAddon01"
                                                 onChange={this.handleChange}
+                                                accept="audio/*,video/*,image/*"
                                             />
                                             <label className="custom-file-label" htmlFor="inputGroupFile01">
                                                 {this.state.filePath}

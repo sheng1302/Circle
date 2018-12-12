@@ -14,6 +14,8 @@ class ItemList extends Component{
 
                 <StackGrid
                     columnWidth={width <= 768 ? '100%' : '33.33%'}
+                    gutterWidth={10}
+                    gutterHeight={10}
                     appear={scaleDown.appear}
                     appeared={scaleDown.appeared}
                     enter={scaleDown.enter}
@@ -27,15 +29,15 @@ class ItemList extends Component{
 
                             return(
                                 <div id={index + 1} key={`key${index}`} >
-                                    <ItemBox title={item.description}
-                                             category={item.category}
-                                             date={item.createdAt}
-                                             description={item.description}
+                                    <ItemBox //title={item.description}
+                                             //category={item.category}
+                                             //date={item.createdAt}
+                                             //description={item.description}
                                              image={item.item_pic_url}
-                                             address={item.pick_up_address}
+                                             //address={item.pick_up_address}
                                              item={item}
-                                             buttonLabel={"reserve"}/> {/*item is the item itself to be reference ..*/}
-
+                                             //buttonLabel={"reserve"}
+                                    />
                                 </div>
                             );
 
