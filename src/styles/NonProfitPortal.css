@@ -1,7 +1,9 @@
-.row-controller{
-    height: 30em;
+.NonProfit-Portal{
+
+    padding: 120px 30px;
 }
 
-.right-body-content{
-    overflow-y: auto;
+.image{
+    display: block;
+    margin: 0;
 }

@@ -1,13 +1,12 @@
 import React, {Component} from "react";
-import Image from 'react-image-resizer';
+import '../styles/ItemBox.css';
 
 class ItemImage extends Component {
     render() {
         return (
-            <Image 
+            <img
+                className="item-image"
             src={this.props.imageSource}
-            height={ 400 }
-            width={ 400 }
             />
         );
     }

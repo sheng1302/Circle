@@ -7,6 +7,7 @@ import ItemAddress from './ItemAddress';
 import Category from './Category';
 import DateModified from './DateModified';
 
+
 class ItemBox extends Component {
   render() {
     return (

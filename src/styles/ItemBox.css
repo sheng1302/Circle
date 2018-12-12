@@ -1,0 +1,5 @@
+.box-item, .item-image{
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
