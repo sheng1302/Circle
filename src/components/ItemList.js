@@ -33,19 +33,16 @@ class ItemList extends Component{
                                 <div className="image" key={`key${index+1}`} >
                                     <ItemImage
                                         imageSource={item.item_pic_url}
-                                    >
-                                    </ItemImage>
+                                    />
+
 
                                     <div className="image-caption-wrapper">
                                         <div className="image-caption">
 
-                                                <ItemBox //title={item.description}
-                                                    //category={item.category}
-                                                    //date={item.createdAt}
-                                                    //description={item.description}
-                                                    //image={item.item_pic_url}
-                                                    //address={item.pick_up_address}
+                                                <ItemBox title={item.description}
+                                                    description={item.User}
                                                     item={item}
+                                                    address={item.pick_up_address}
                                                     buttonLabel={"reserve"}
                                                     completePhrase={"reserved"}
                                                     callFrom={"itemList"}

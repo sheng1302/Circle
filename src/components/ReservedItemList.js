@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import StackGrid, {transitions} from "react-stack-grid";
 import ItemBox from "./ItemBox";
 import sizeMe from 'react-sizeme';
+import ItemImage from "./ItemImage";
 
 const { scaleDown } = transitions;
 class ReservedItemList extends Component{
@@ -30,16 +31,25 @@ class ReservedItemList extends Component{
                         return(
                             <div className="image" key={`key${index + 1}`} >
 
-                                <ItemBox //title={eachComponent.Item.description}
-                                         //category={eachComponent.Item.category}
-                                         //date={eachComponent.Item.createdAt}
-                                         description={eachComponent.Item.description}
-                                         image={eachComponent.Item.item_pic_url}
-                                         address={eachComponent.Item.pick_up_address}
-                                         item={eachComponent.Item}
-                                         buttonLabel={"Complete"}
-                                         completePhrase={"Completed"}
-                                         callFrom={"reservedItemList"}/> {/*item is the item itself to be reference ..*/}
+                                <ItemImage
+                                    imageSource={eachComponent.Item.item_pic_url}
+                                />
+
+                                <div className="image-caption-wrapper">
+                                    <div className="image-caption">
+
+                                        <ItemBox title={eachComponent.Item.description}
+                                                 description={eachComponent.Item.User}
+                                                 item={eachComponent.Item}
+                                                 address={eachComponent.Item.pick_up_address}
+                                                 buttonLabel={"Complete"}
+                                                 completePhrase={"Completed"}
+                                                 callFrom={"reservedItemList"}
+                                                 btnClassName={"btn-primary-white-item"}
+                                        />
+
+                                    </div>
+                                </div>
 
                             </div>
                         );
