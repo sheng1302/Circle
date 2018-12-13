@@ -29,10 +29,12 @@ class ReservedItemList extends Component{
                     this.props.itemList.map((eachComponent, index) => {
 
                         return(
-                            <div className="image" key={`key${index + 1}`} >
+                            <div className="image-container" key={`key${index + 1}`} >
 
                                 <ItemImage
+                                    className="image"
                                     imageSource={eachComponent.Item.item_pic_url}
+                                    imgClassName={"image"}
                                 />
 
                                 <div className="image-caption-wrapper">
