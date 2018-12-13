@@ -24,6 +24,7 @@ class UserPortal extends Component{
         const data = new FormData();
         data.append('image', this.state.fileDetail);
         data.append('owner_id','1bb71fc0-fdc9-11e8-91c3-ef72bb587e0e'); //1bb71fc0-fdc9-11e8-91c3-ef72bb587e0e for build only***
+        // Sheng local machine :d2348160-f901-11e8-9efe-b167b32167f6
         data.append('category',this.state.donationCategory);
         data.append('pick_up_address',this.state.pickUpAddress);
         data.append('reserved_status',false);

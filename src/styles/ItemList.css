@@ -9,8 +9,22 @@
     max-height: 100%;
     box-sizing: border-box;
     overflow-y: auto;
+    opacity: 0;
 }
 
 .image-caption{
     color: white;
+}
+
+.image-container{
+    display: block;
+    position: relative;
+    margin: 0;
+}
+
+
+
+.image-container:hover .image-caption-wrapper {
+    opacity: 1;
+
 }

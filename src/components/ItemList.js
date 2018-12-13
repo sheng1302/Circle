@@ -30,9 +30,11 @@ class ItemList extends Component{
                         this.props.itemList.map((item, index) => {
 
                             return(
-                                <div className="image" key={`key${index+1}`} >
+                                <div className="image-container" key={`key${index+1}`} >
                                     <ItemImage
+                                        className="image"
                                         imageSource={item.item_pic_url}
+                                        imgClassName={"image"}
                                     />
 
 

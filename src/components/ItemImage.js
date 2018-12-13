@@ -5,7 +5,7 @@ class ItemImage extends Component {
     render() {
         return (
             <img
-                className="item-image"
+                className={`item-image ${this.props.imgClassName}`}
             src={this.props.imageSource}
             />
         );
