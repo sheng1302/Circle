@@ -74,7 +74,7 @@ class UserPortal extends Component{
 
     handleChange = (e) => {
 
-        this.setState({filePath : e.target.value});
+        this.setState({filePath : e.target.files[0].name});
         this.setState({fileDetail : e.target.files[0]});
     };
 
