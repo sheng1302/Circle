@@ -62,7 +62,8 @@ class About extends Component{
                         <img className="rounded-circle" src={KevinIMG} alt="Generic placeholder image" width="200" height="200" />
                         <h2>Kevin Thaw</h2>
                         <p>Computer Science Major at Brooklyn College</p>
-                        <p><a className="btn btn-secondary" href="#" role="button">LinkedIn</a></p>
+                        <p>Backend Developer</p>
+                        <p><a className="btn btn-secondary" href="https://www.linkedin.com/in/kevinthaw/" role="button">LinkedIn</a></p>
                         </Col>
                     </Row>
 
@@ -71,7 +72,7 @@ class About extends Component{
                         <img className="rounded-circle" src={RachelIMG} alt="Generic placeholder image" width="200" height="200" />
                         <h2>Rachel Chen</h2>
                         <p>Computer Information System Major in Baruch College</p>
-                        <p>Front-end Developer</p>
+                        <p>Front End Developer</p>
                         <p><a className="btn btn-secondary" href="https://www.linkedin.com/in/rachelchen18/" role="button">LinkedIn</a></p>
                         </Col>
 

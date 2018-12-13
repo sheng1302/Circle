@@ -75,11 +75,7 @@ class UserPortal extends Component{
     handleChange = (e) => {
 
         this.setState({filePath : e.target.value});
-        this.setState({fileDetail : e.target.files[0]},
-            () => {
-                console.log(this.state.fileDetail);
-            });
-
+        this.setState({fileDetail : e.target.files[0]});
     };
 
     handleNameChange = (e) => {
@@ -164,7 +160,7 @@ class UserPortal extends Component{
                                     </div>
                                     <div className="form-check">
                                         <input className="form-check-input" onChange={this.handleDonationCategoryChange} type="checkbox" id="defaultCheck12"/>
-                                        <label htmlFor="defaultCheck12" className="grey-text">Toys</label>
+                                        <label htmlFor="defaultCheck12" className="grey-text">Others</label>
                                     </div>
 
 
