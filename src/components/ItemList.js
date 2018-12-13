@@ -32,12 +32,12 @@ class ItemList extends Component{
                             return(
                                 <div className="image" key={`key${index+1}`} >
 
-                                    <ItemBox //title={item.description}
+                                    <ItemBox title={item.description}
                                         //category={item.category}
                                         //date={item.createdAt}
-                                        //description={item.description}
+                                        description={item.User}
                                         image={item.item_pic_url}
-                                        //address={item.pick_up_address}
+                                        address={item.pick_up_address}
                                         item={item}
                                         buttonLabel={"reserve"}
                                         completePhrase={"reserved"}

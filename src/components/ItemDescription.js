@@ -5,7 +5,8 @@ class ItemDescription extends Component {
         return (
         <div className="description">
             <p>
-            {this.props.description}
+            <label>Posted By:</label> {this.props.description.username} <br/>
+            <label>Email: </label> {this.props.description.email}
             </p>
         </div>
         );
