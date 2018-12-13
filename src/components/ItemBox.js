@@ -22,7 +22,8 @@ class ItemBox extends Component {
                 item={this.props.item}
                 buttonLabel={this.props.buttonLabel}
                 completePhrase={this.props.completePhrase}
-                callFrom={this.props.callFrom}/>
+                callFrom={this.props.callFrom}
+                btnClassName={this.props.btnClassName}/>
         </div>
     );
   }
@@ -108,6 +109,7 @@ class ItemReserve extends Component {
     render() {
         return (
             <button
+                className={this.props.btnClassName}
                 onClick={this.markItem}
                 disabled={this.state.complete_status}>{this.state.buttonText}
 

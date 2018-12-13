@@ -8,6 +8,7 @@ class ReservedItemList extends Component{
 
 
     render(){
+
         const { width } = this.props;
         return(
 
@@ -28,6 +29,7 @@ class ReservedItemList extends Component{
 
                         return(
                             <div className="image" key={`key${index + 1}`} >
+
                                 <ItemBox //title={eachComponent.Item.description}
                                          //category={eachComponent.Item.category}
                                          //date={eachComponent.Item.createdAt}

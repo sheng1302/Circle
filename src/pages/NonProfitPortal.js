@@ -24,6 +24,7 @@ class NonProfitPortal extends Component{
     render(){
         return(
             <div className="NonProfit-Portal">
+
                 <ItemList
                     itemList={this.state.items}
                     />

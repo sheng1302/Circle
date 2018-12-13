@@ -3,7 +3,7 @@ import ItemBox from './ItemBox';
 import sizeMe from 'react-sizeme';
 import StackGrid, {transitions} from "react-stack-grid";
 import ItemImage from "./ItemImage";
-
+import '../styles/ItemList.css';
 
 const { scaleDown } = transitions;
 
@@ -31,18 +31,31 @@ class ItemList extends Component{
 
                             return(
                                 <div className="image" key={`key${index+1}`} >
+                                    <ItemImage
+                                        imageSource={item.item_pic_url}
+                                    >
+                                    </ItemImage>
 
-                                    <ItemBox //title={item.description}
-                                        //category={item.category}
-                                        //date={item.createdAt}
-                                        //description={item.description}
-                                        image={item.item_pic_url}
-                                        //address={item.pick_up_address}
-                                        item={item}
-                                        buttonLabel={"reserve"}
-                                        completePhrase={"reserved"}
-                                        callFrom={"itemList"}
-                                    />
+                                    <div className="image-caption-wrapper">
+                                        <div className="image-caption">
+
+                                                <ItemBox //title={item.description}
+                                                    //category={item.category}
+                                                    //date={item.createdAt}
+                                                    //description={item.description}
+                                                    //image={item.item_pic_url}
+                                                    //address={item.pick_up_address}
+                                                    item={item}
+                                                    buttonLabel={"reserve"}
+                                                    completePhrase={"reserved"}
+                                                    callFrom={"itemList"}
+                                                    btnClassName={"btn-primary-white-item"}
+                                                />
+
+                                        </div>
+                                    </div>
+
+
                                 </div>
                             );
 

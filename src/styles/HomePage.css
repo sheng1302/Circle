@@ -1,3 +1,8 @@
+.size-small{
+    width: 6em;
+}
+
+
 .btn-primary-white{
     display: inline-block;
     border-width: 2px;
@@ -13,10 +18,32 @@
     margin-right: 40px;
 }
 
+.btn-primary-white-item{
+    display: inline-block;
+    border-width: 2px;
+    border-style: solid;
+    background-color:transparent;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    width: 6em;
+    transition: 0.1s;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.btn-primary-white-item:hover{
+    background: white;
+    color: black;
+}
+
+
+
 .btn-primary-white:hover{
     background: white;
     color: black;
 }
+
 
 
 .parallax-visual{
