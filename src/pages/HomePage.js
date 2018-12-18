@@ -14,7 +14,7 @@ class HomePage extends Component{
                         <br/>
 
                         <div className="display">
-                            <h3 className="display-h">Help Us Recycling The Clothes</h3>
+                            <h3 className="display-h">Help Us Reduce Waste</h3>
                         </div>
 
                         <h3>"It's not at all important to get it right the first time. It's vitally important to get it right the last time."</h3>

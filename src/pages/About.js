@@ -62,7 +62,7 @@ class About extends Component{
                         <img className="rounded-circle" src={KevinIMG} alt="Generic placeholder image" width="200" height="200" />
                         <h2>Kevin Thaw</h2>
                         <p>Computer Science Major at Brooklyn College</p>
-                        <p>Backend Developer</p>
+                        <p>Full Stack Developer</p>
                         <p><a className="btn btn-secondary" href="https://www.linkedin.com/in/kevinthaw/" role="button">LinkedIn</a></p>
                         </Col>
                     </Row>
